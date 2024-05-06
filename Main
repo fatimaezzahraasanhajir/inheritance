@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        InheritanceSortedIntList inheritanceList = new InheritanceSortedIntList();
+        inheritanceList.add(5);
+        inheritanceList.addAll(new SortedIntList()); 
+        System.out.println("Total elements added with inheritance: " + inheritanceList.getTotalAdded());
+
+        DelegationSortedIntList delegationList = new DelegationSortedIntList();
+        delegationList.add(10);
+        delegationList.addAll(new SortedIntList());
+        System.out.println("Total elements added with delegation: " + delegationList.getTotalAdded());
+    }
+}
